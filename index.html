@@ -1,12 +1,162 @@
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/mainStyle.css">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/mainStyle.css" />
   </head>
   <body>
-    <div class="top-nav">
 
+    <!-- TOP -->
+
+    <div class="top" id="top">
+      <div class="name">ZAKŁAD DĄBROWSKI</div>
+      <div class="out-nav">
+        <a href="index.html">Home</a>
+        <a href="sub-sites/galery.html">Galeria</a>
+        <a href="sub-sites/contact.html">Kontakt</a>
+      </div>
+
+      <div class="menu-nav" id="menu-nav">
+        <ul>
+          <li class="menu-icon-line"></li>
+          <li class="menu-icon-line"></li>
+          <li class="menu-icon-line"></li>
+        </ul>
+      </div>
     </div>
     
+    <!--  MAIN -->
+
+    <div class="left" id="left">
+      <img id="imgl" src="images\kwiatki.jpg">
+    </div>
+
+    <div class="right" id="right">
+      <img id="imgr" src="images\kostka.jpg">
+    </div>
+
+        <!-- LEFT -->
+
+    <div class="left" id="left2">
+
+      <div class="infol">
+        KWIACIARNIA
+      </div>
+
+      <div class="left-border">
+        
+      </div>
+
+      <div id="infol-text" class="infol-text">
+        - Znicze - <br>
+        - Wkłady - <br>
+        - Wiązanki - <br>
+        - Wieńce - <br>
+        - Kompozycje - <br>
+        - Wazony - 
+      </div>
+      <a href="sub-sites\kwiaciarnia.html">
+        <div class="continuel">
+          Przejdź
+        </div>
+      </a>
+    </div>
+
+        <!-- RIGHT -->
+
+    <div class="right" id="right2">
+
+      <div class="infor">
+        POMNIKI
+      </div>
+
+      <div class="right-border">
+        
+      </div>
+
+      <div id="infor-text" class="infor-text">
+        - Układanie kostki - <br>
+        - Murowanie grobów - <br>
+        - Pogłębienia - <br>
+        - Montaż pomników - <br>
+        - Sprzedaż pomników - <br>
+        - i nie tylko - 
+      </div>
+      <a href="sub-sites\pomniki.html">
+        <div class="continuer">
+          Przejdź
+        </div>
+      </a>
+    </div>
+
   </body>
+  <script>
+    /* mouse over menu animation */
+
+    const outerMenuIcon = document.getElementById("menu-nav");
+    outerMenuIcon.addEventListener("mouseover", () => {
+      let lines = document.getElementsByClassName("menu-icon-line");
+      lines[0].style.backgroundColor = "yellow";
+      lines[1].style.backgroundColor = "yellow";
+      lines[2].style.backgroundColor = "yellow"; 
+    })
+
+    outerMenuIcon.addEventListener("mouseout", () => {
+      let lines = document.getElementsByClassName("menu-icon-line");
+      lines[0].style.backgroundColor = "white";
+      lines[1].style.backgroundColor = "white";
+      lines[2].style.backgroundColor = "white";
+    })
+
+
+
+    /* main divs & photos*/
+
+    const t = document.getElementById("top");
+    const l = document.getElementById("left");
+    const r = document.getElementById("right");
+
+    const l2 = document.getElementById("left2");
+    const r2 = document.getElementById("right2");
+
+    const imgl = document.getElementById("imgl");
+    const imgr = document.getElementById("imgr");
+
+    const infoltext = document.getElementById("infol-text");
+    const infortext = document.getElementById("infor-text");
+   
+
+    l2.addEventListener("mouseover", () => {
+      l.style.width = "55%";
+      r.style.width = "45%";
+
+      l2.style.width = "55%";
+      r2.style.width = "45%";
+
+      imgl.style.filter = "blur(0px) contrast(1) brightness(1)";
+      imgr.style.filter = "blur(5px) contrast(0.5) brightness(0.7)";
+    })
+
+    r2.addEventListener("mouseover", () => {
+      r.style.width = "55%";
+      l.style.width = "45%";
+
+      r2.style.width = "55%";
+      l2.style.width = "45%";
+
+      imgr.style.filter = "blur(0px) contrast(1) brightness(1)";
+      imgl.style.filter = "blur(5px) contrast(0.5) brightness(0.7)";
+    })
+
+    t.addEventListener("mouseover", () => {
+      r.style.width = "50%";
+      l.style.width = "50%";
+
+      r2.style.width = "50%";
+      l2.style.width = "50%";
+
+      imgl.style.filter = "blur(5px) contrast(0.5) brightness(0.7)";
+      imgr.style.filter = "blur(5px) contrast(0.5) brightness(0.7)";
+    })
+
+  </script>
 </html>
